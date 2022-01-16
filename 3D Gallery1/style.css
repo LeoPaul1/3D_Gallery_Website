@@ -1,0 +1,316 @@
+*
+{
+        margin: 0;
+        padding: 0;
+}
+
+:root {
+  --gutter: 200px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://static.boredpanda.com/blog/wp-content/uploads/2017/01/i-Tried-to-Make-Van-Gogh-Paintings-full-of-life-and-these-are-the-results-58757a5a0784b__605.gif');
+}
+
+#navbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+    }
+    
+    .nav-content {
+        display: flex;
+        width: 100%;
+       align-items: center;
+    }
+    
+    .nav-content .logo{
+        display: flex;
+        width: 15%;
+    }
+    
+    
+    .nav-content .logo img{
+      max-width: 100%;
+      height:auto;
+    }
+    
+    
+    .logo {
+      padding-top: 15px;
+      -webkit-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      height: 80px;
+    }
+    
+    
+    .logo:hover{
+      transform: rotate3d(0, 1, .5, 2turn);
+        position: relative;
+        z-index: 5;
+    }
+    
+    
+    .menu-bg .logo {
+        padding-top: 10px;
+        -webkit-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+    }
+    
+    .nav-content ul{
+        font-size: 25px;
+        font-weight: bold;
+        padding: 50;
+        list-style: none;
+        width: 70%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .nav-content ul li{
+        display: inline-block;
+        margin-right: 30px;
+    }
+    
+    .nav-content ul li:last-child{
+        margin-left: 0;
+      }
+      
+    .nav-content ul li a{
+        text-decoration: none;
+      color: #ffffff;
+      transition: all .4s ease-in-out;
+    }
+
+    #welcome-section{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+      color: #ffffff;
+       transition: all .5s ease-in-out;
+    }
+    
+   .scene {
+  background-color: rgba(209, 19, 19, 0.3);
+  height: 100vh;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  width: calc(340px * 5 + 250px);
+  min-width: 100%;
+  min-height: 550px;
+  max-height: 1080px
+}
+
+@media (-ms-high-contrast: active),(-ms-high-contrast: none) {
+
+.scene {
+    margin-left: 290px
+}
+  }
+
+.box {
+        float: left;
+        width: 33.%;
+        padding: 5px;
+  min-width: 100%;
+  height: 100%;
+  min-height: 550px;
+  position: relative;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -ms-transform-style: none;
+  -webkit-transform: translateZ(calc(200px * -2));
+          transform: translateZ(calc(200px * -2));
+  -webkit-transform: translateZ(calc(var(--gutter) * -2));
+          transform: translateZ(calc(var(--gutter) * -2));
+  -ms-transform: none
+}
+
+@media (-ms-high-contrast: active),(-ms-high-contrast: none) {
+
+.box {
+    position: static
+}
+  }
+
+.box__face {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: rgb(5, 2, 2);
+  font-size: 2em;
+  font-family: Arial;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.box__face--back {
+  min-width: 100%;
+  height: 100%;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(28,28,28,0.05) inset, 30px 0px 120px -40px rgba(28,28,28,0.15) inset, -30px 0px 120px -40px rgba(28,28,28,0.15) inset;
+          box-shadow: 0 5px 10px 0 rgba(28,28,28,0.05) inset, 30px 0px 120px -40px rgba(28,28,28,0.15) inset, -30px 0px 120px -40px rgba(28,28,28,0.15) inset;
+}
+
+.box__face--right,
+.box__face--left {
+  width: calc(200px * 2);
+  width: calc(var(--gutter) * 2);
+  height: 100%;
+}
+
+.box__face--left {
+  left: calc(200px * 2);
+  left: calc(var(--gutter) * 2);
+  border-right: 1px rgba(28,28,28,0.15) solid;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(28,28,28,0.05) inset, -20px 0px 60px -20px rgba(28,28,28,0.15) inset;
+          box-shadow: 0 5px 10px 0 rgba(28,28,28,0.05) inset, -20px 0px 60px -20px rgba(28,28,28,0.15) inset;
+  -webkit-transform: rotateY( 90deg) translateZ(calc(200px * -3)) translateX(calc(200px * -1));
+          transform: rotateY( 90deg) translateZ(calc(200px * -3)) translateX(calc(200px * -1));
+  -webkit-transform: rotateY( 90deg) translateZ(calc(var(--gutter) * -3)) translateX(calc(var(--gutter) * -1));
+          transform: rotateY( 90deg) translateZ(calc(var(--gutter) * -3)) translateX(calc(var(--gutter) * -1));
+  color: #000;
+  padding: 10px 60px 50px 40px;
+}
+
+.box__face--right {
+  right: calc(200px * 2);
+  right: calc(var(--gutter) * 2);
+  border-left: 1px rgba(28,28,28,0.15) solid;
+  -webkit-box-shadow: 0 5px 10px 0 rgba(28,28,28,0.05) inset, 20px 0px 60px -20px rgba(28,28,28,0.15) inset;
+          box-shadow: 0 5px 10px 0 rgba(28,28,28,0.05) inset, 20px 0px 60px -20px rgba(28,28,28,0.15) inset;
+  -webkit-transform: rotateY(-90deg) translateZ(calc(200px * -3)) translateX(200px);
+          transform: rotateY(-90deg) translateZ(calc(200px * -3)) translateX(200px);
+  -webkit-transform: rotateY(-90deg) translateZ(calc(var(--gutter) * -3)) translateX(var(--gutter));
+          transform: rotateY(-90deg) translateZ(calc(var(--gutter) * -3)) translateX(var(--gutter));
+}
+
+.box__face--top,
+.box__face--bottom {
+  width: 100%;
+  height: calc(200px * 2);
+  height: calc(var(--gutter) * 2);
+}
+
+.box__face--top {
+  top: 200px;
+  top: var(--gutter);    
+  background-color: #310903;
+  -webkit-transform: rotateX(-90deg) translateZ(calc(200px * -2)) translateY(calc(200px * -1));
+          transform: rotateX(-90deg) translateZ(calc(200px * -2)) translateY(calc(200px * -1));
+  -webkit-transform: rotateX(-90deg) translateZ(calc(var(--gutter) * -2)) translateY(calc(var(--gutter) * -1));
+          transform: rotateX(-90deg) translateZ(calc(var(--gutter) * -2)) translateY(calc(var(--gutter) * -1)); 
+}
+
+.box__face--bottom {
+  bottom: 200px;
+  bottom: var(--gutter);
+  -webkit-box-shadow: 0 8px 15px -5px rgba(28,28,28,0.2) inset, 10px 0 15px -5px rgba(28,28,28,0.2) inset, -10px 0 15px -5px rgba(28,28,28,0.2) inset;
+          box-shadow: 0 8px 15px -5px rgba(28,28,28,0.2) inset, 10px 0 15px -5px rgba(28,28,28,0.2) inset, -10px 0 15px -5px rgba(28,28,28,0.2) inset;
+  background-image: url('https://img.freepik.com/free-vector/wood-planks-texture-background-parquet-flooring_1048-2145.jpg?size=338&ext=jpg');
+  background-size: contain;
+  -webkit-transform: rotateX( 90deg) translateZ(calc(200px * -2)) translateY(200px);
+          transform: rotateX( 90deg) translateZ(calc(200px * -2)) translateY(200px);
+  -webkit-transform: rotateX( 90deg) translateZ(calc(var(--gutter) * -2)) translateY(var(--gutter));
+          transform: rotateX( 90deg) translateZ(calc(var(--gutter) * -2)) translateY(var(--gutter));
+}
+
+.box__face--left, .box__face--right, .box__face--back {
+    background: url('https://www.freepik.com/free-vector/gallery-interior-realistic_1537616.htm#query=museum%20background&position=14&from_view=search') bottom left;
+    color: white;
+            font-size: 4em;
+            transition: 0.5s;
+            font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc,
+    0 3px 0 rgb(102, 40, 40), 0 4px 0 #ccc,
+    0 5px 0 rgb(31, 9, 9), 0 6px 0 #ccc,
+    0 7px 0 #ccc, 0 8px 0 #ccc,
+    0 9px 0 #ccc, 0 10px 0 #ccc,
+    0 11px 0 #ccc, 0 12px 0 #ccc,
+    0 20px 30px rgba(20, 128, 110, 0.521); 
+}
+
+.objects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  height: 100%;
+  -webkit-box-pack: start !important;
+      -ms-flex-pack: start !important;
+          justify-content: flex-start !important;
+  padding-left: 200px;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+     
+.objects__object {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  height: calc(50% - 40px);
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.objects__object:nth-of-type(2n - 1) {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  left: 0;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  position: relative;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.objects__object img {
+  border: 8px #fff solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-box-shadow: 0 2px 12px 1px rgba(28,28,28, 0.2), 0 8px 6px -6px rgba(28,28,28, 0.5);
+          box-shadow: 0 2px 12px 1px rgba(28,28,28, 0.2), 0 8px 6px -6px rgba(28,28,28, 0.5)
+}
+
+@media (-ms-high-contrast: active),(-ms-high-contrast: none) {
+
+.objects__object img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+}
+
+  }
+
+  
